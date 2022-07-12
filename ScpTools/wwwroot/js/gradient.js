@@ -4,7 +4,7 @@ let copy = '';
 generateGradient();
 
 $( document ).ready(function (){
-    Coloris({themeMode: 'dark', theme: 'polaroid',formatToggle: true,defaultColor: '#f00'});
+    Coloris({themeMode: 'dark', theme: 'polaroid',defaultColor: '#f00', alpha: false, format: 'hex'});
 });
 
 $("#paste").click(function (){
