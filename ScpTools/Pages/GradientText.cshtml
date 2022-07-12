@@ -1,0 +1,49 @@
+﻿@page "/gradient"
+@model ScpTools.Pages.GradientText
+@{
+    ViewData["Title"] = "Gradient Text";
+}
+
+<link rel="stylesheet" href="~/css/gradient.css" asp-append-version="true"/>
+
+<div>
+    <h1 class="title">
+        Gradient Text Generator
+    </h1>
+    
+    <div class="input-group mb-3">
+        <input id="input" onchange="generateGradient()" type="text" class="form-control" value="My Server Name" placeholder="My Server Name">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" id="paste" type="button">Paste</button>
+        </div>
+    </div>
+    
+    <h4 class="title">Colors:</h4>
+    <div class="colors">
+        <div id="color-list" class="color-list">
+            <input type="text" value='#b31fd0' class="color-input coloris" id="color-0" data-coloris>
+            <input type="text" value='#1f98d0' class="color-input coloris" id="color-1" data-coloris>
+        </div>
+        <div class="principal-btns">
+            <button class="principal-color-btn" id="add-btn">+</button>
+            <button class="principal-color-btn" id="remove-btn">-</button>
+        </div>
+    </div>
+    
+    <div class="generate-container">
+        <button class="btn btn-success" onclick="generateGradient()" type="button">
+            Generate
+        </button>
+        <button class="btn btn-warning" onclick="copyGradient()" type="button">Copy As Rich Text</button>
+    </div>
+    
+    <div class="preview" id="preview"/>
+</div>
+
+<!-- Color Picker Lib -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"/>
+<script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+
+<script src="~/js/rainbowvis.js" asp-append-version="true"></script>
+<script src="~/js/gradient.js" asp-append-version="true"></script>
+

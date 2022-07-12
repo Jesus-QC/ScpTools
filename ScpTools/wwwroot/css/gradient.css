@@ -1,0 +1,53 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.clr-field button {
+    width: 22px !important;
+    height: 22px !important;
+    left: 13px;
+    border-radius: 5px;
+}
+
+.clr-field input {
+    padding-left: 36px;
+}
+
+.color-input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-style: groove;
+    width: 115px;
+    margin: 5px;
+    font-family: monospace;
+}
+
+.color-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.principal-btns{
+    margin-left: 5px;
+    margin-top: 5px;
+    font-family: monospace;
+}
+
+.principal-color-btn{
+    width: 35px;
+    height: 35px;
+    border-style: dashed;
+    border-radius: 5px;
+}
+
+.generate-container{
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.preview{
+    background-color: #1a1e21;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10vh;
+}
