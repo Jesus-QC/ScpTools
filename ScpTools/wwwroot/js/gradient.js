@@ -62,8 +62,18 @@ function generateGradient(){
     let ret = '';
     
     for(let i = 1; i <= word.length; i++){
-        ret += "<span style='color: #" + rainbow.colourAt(i) + "'>" + word.at(i - 1) + "</span>";
-        copy += "<color=#" + rainbow.colourAt(i) + ">" + word.at(i - 1) + "</color>";
+        let char = word.at(i - 1);
+        
+        if(char === ' '){
+            copy += ' ';
+            ret += ' ';
+            continue;
+        }
+        
+        let color = "#" +  rainbow.colourAt(i);
+        
+        ret += "<span style='color: " + color + "'>" + char + "</span>";
+        copy += "<color=" + color + ">" + char + "</color>";
     }
 
     let preview = $("#preview");
