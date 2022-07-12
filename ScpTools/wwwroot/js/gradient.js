@@ -51,8 +51,14 @@ function generateGradient(){
     copy = '';
     let word = $("#input").val();
     
-    if(word.length < 1){
-        return "<span>Input empty!</span>";
+    if(word.length < 2){
+        Swal.fire({
+            icon: 'error',
+            title: 'Input not long enough, it needs at least 2 characters.',
+            showConfirmButton: false,
+            timer: 1500
+        });
+        return;
     }
     
     let rainbow = new Rainbow();
