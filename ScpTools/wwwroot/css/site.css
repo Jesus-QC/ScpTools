@@ -52,51 +52,63 @@ body{
 }
 
 .server-info{
-  height: 125px;
-  width: 700px;
+  height: 18vh;
+  width: 40vw;
   background-color: #181414;
   font-family: 'Roboto', sans-serif;
   padding: 10px;
   border-radius: 10px;
+  border-color: #000;
+  border-style: solid;
+  border-width: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 800px){
+  .server-info{
+    height: 13vh;
+    width: 90vw;
+  }
+  
+  @media (max-height: 915px){
+    .server-info{
+      height: 17vh;
+    }
+  }
 }
 
 .server-info-name{
   overflow-wrap: break-word;
   overflow-y: hidden;
-  width: 95%;
-  max-height: 75px;
-  font-size: 1.5rem;
+  width: 33vh;
+  max-height: 8vh;
+  font-size: 1.25rem;
 }
 
 .server-info-counter{
   position: absolute;
   bottom: 0;
-  left: 5px;
-  color: white;
   font-size: 1.75rem;
 }
 
 .server-info-play{
-  color: white;
   position: absolute;
-  top: 10px;
-  right: 5px;
+  top: 0.65rem;
+  right: 0.25rem;
   font-size: 3rem !important;
 }
 
 .server-info-star{
-  color: white;
   position: absolute;
-  bottom: 15px;
-  right: 7px;
+  bottom: 0.85rem;
+  right: 0.35rem;
   font-size: 2.5rem !important;
 }
 
 .server-info-flags{
   position: absolute;
-  bottom: 5px;
-  left: 90px;
-  color: white;
+  bottom: 0.25rem;
+  left: 5.25rem;
   font-size: 1.5rem;
 }
 

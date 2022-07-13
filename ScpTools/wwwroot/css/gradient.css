@@ -31,14 +31,14 @@
 
 .main-container{
     height: 100vh;
-    background: linear-gradient(45deg, #000000, #112d56);
+    background: radial-gradient(#112d56, #000);
 }
 
 .step-container{
     margin-top: 2vh;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 800px){
     .big-container{
         display: flex;
     }
