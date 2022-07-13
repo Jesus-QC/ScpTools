@@ -27,6 +27,7 @@
     padding: 20px;
     background-color: white;
     overflow-y: scroll;
+    max-height: 100vh;
 }
 
 .main-container{
