@@ -6,38 +6,69 @@
 
 <link rel="stylesheet" href="~/css/gradient.css" asp-append-version="true"/>
 
-<div>
-    <h1 class="title">
-        Gradient Text Generator
-    </h1>
-    
-    <div class="input-group mb-3">
-        <input id="input" onchange="generateGradient()" type="text" class="form-control" value="My Server Name" placeholder="My Server Name">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" id="paste" type="button">Paste</button>
+<div class="big-container">
+    <div class="config-container">
+        <h1>
+            Rich Text
+                <br/>
+            Gradient
+        </h1>
+
+        <div class="step-container">
+            <small>1. Text Input</small>
+            <textarea class="text-input" id="input" onchange="generateGradient()">Your Server Name</textarea>
+        </div>
+        
+        <div class="step-container">
+            <small>2. Gradient Colors</small>
+            <div class="color-container" id="color-list">
+                <input type="text" value='#ff3995' class="color-input coloris" id="color-0" data-coloris>
+                <input type="text" value='#ffbeea' class="color-input coloris" id="color-1" data-coloris>
+            </div>
+            <button class="cool-btn add-btn" id="add-btn">Add</button>
+            <button class="cool-btn remove-btn" id="remove-btn">Remove</button>
+        </div>
+
+        <div class="step-container">
+            <small>3. Actions</small>
+            <button class="cool-btn run-btn" onclick="generateGradient()">
+                <span class="material-symbols-outlined btn-icon">
+                    bolt
+                </span>
+                Generate
+            </button>
+        </div>
+        
+        <div class="step-container">
+            <small>4. Output</small>
+            <textarea class="text-input output" id="output">Output</textarea>
+            <button class="cool-btn copy-btn" onclick="copyGradient()">
+                <span class="material-symbols-outlined btn-icon">
+                    content_copy
+                </span>
+                Copy
+            </button>
         </div>
     </div>
     
-    <h4 class="title">Colors:</h4>
-    <div class="colors">
-        <div id="color-list" class="color-list">
-            <input type="text" value='#b31fd0' class="color-input coloris" id="color-0" data-coloris>
-            <input type="text" value='#1f98d0' class="color-input coloris" id="color-1" data-coloris>
-        </div>
-        <div class="principal-btns">
-            <button class="principal-color-btn" id="add-btn">+</button>
-            <button class="principal-color-btn" id="remove-btn">-</button>
+    <div class="main-container">
+        <div class="centered server-info" style="position: relative">
+            <div id="name" class="server-info-name"></div>
+            <span class="server-info-counter">0/25</span>
+            <div class="server-info-flags">
+                <span class="material-symbols-outlined filled flag-icon">
+                    build
+                </span>
+                <span>Modded</span>
+            </div>
+            <span class="material-symbols-outlined server-info-play filled">
+                play_arrow
+            </span>
+            <span class="material-symbols-outlined server-info-star">
+                star
+            </span>
         </div>
     </div>
-    
-    <div class="generate-container">
-        <button class="btn btn-success" onclick="generateGradient()" type="button">
-            Generate
-        </button>
-        <button class="btn btn-warning" onclick="copyGradient()" type="button">Copy As Rich Text</button>
-    </div>
-    
-    <div class="preview" id="preview"></div>
 </div>
 
 <!-- Color Picker Lib -->

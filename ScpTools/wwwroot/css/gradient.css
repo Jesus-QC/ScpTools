@@ -1,6 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-.clr-field button {
+﻿.clr-field button {
     width: 22px !important;
     height: 22px !important;
     left: 13px;
@@ -14,7 +12,7 @@
 .color-input{
     padding: 5px 10px;
     border-radius: 5px;
-    border-style: groove;
+    border-style: hidden;
     width: 115px;
     margin: 5px;
     font-family: monospace;
@@ -25,29 +23,76 @@
     flex-wrap: wrap;
 }
 
-.principal-btns{
-    margin-left: 5px;
-    margin-top: 5px;
-    font-family: monospace;
+.config-container{
+    padding: 20px;
+    background-color: white;
+    overflow-y: scroll;
 }
 
-.principal-color-btn{
-    width: 35px;
-    height: 35px;
-    border-style: dashed;
+.main-container{
+    height: 100vh;
+    background: linear-gradient(45deg, #000000, #112d56);
+}
+
+.step-container{
+    margin-top: 2vh;
+}
+
+@media screen and (min-width: 768px){
+    .big-container{
+        display: flex;
+    }
+    .config-container{
+        width: 30vw;
+        height: 100vh;
+    }
+    .main-container{
+        width: 70vw;
+    }
+}
+
+.text-input{
+    width: 100%;
+    height: 8rem;
     border-radius: 5px;
+    border-style: solid;
 }
 
-.generate-container{
-    text-align: center;
-    margin-top: 10vh;
+.color-container{
+    overflow-y: scroll;
+    width: 100%;
+    height: 8rem;
 }
 
-.preview{
-    background-color: #1a1e21;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 10vh;
+.cool-btn{
+    border-style: solid;
+    background-color: white;
+}
+
+.add-btn{
+    color: #428af5;
+    border-color: #428af5;
+}
+
+.remove-btn{
+    color: #f54281;
+    border-color: #f54281;
+}
+
+.run-btn{
+    margin-top: 10px;
+    width: 100%;
+    color: #42f54b;
+    border-color: #42f54b;
+}
+
+.copy-btn{
+    margin-top: 10px;
+    width: 100%;
+    color: #ff9d34;
+    border-color: #ff9d34;
+}
+
+.output{
+    height: 9vh;
 }

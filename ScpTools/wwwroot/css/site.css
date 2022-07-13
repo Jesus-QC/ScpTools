@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 html {
   font-size: 14px;
 }
@@ -13,6 +16,95 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-icon{
+  transform: translate(0, 20%); 
+  font-size: 1em !important;
+}
+
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: #555;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+  background-color: #777;
+}
+
+.server-info{
+  height: 125px;
+  width: 700px;
+  background-color: #181414;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.server-info-name{
+  overflow-wrap: break-word;
+  overflow-y: hidden;
+  width: 95%;
+  max-height: 75px;
+  font-size: 1.5rem;
+}
+
+.server-info-counter{
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  color: white;
+  font-size: 1.75rem;
+}
+
+.server-info-play{
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-size: 3rem !important;
+}
+
+.server-info-star{
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  right: 7px;
+  font-size: 2.5rem !important;
+}
+
+.server-info-flags{
+  position: absolute;
+  bottom: 5px;
+  left: 90px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.flag-icon{
+  font-size: 2rem !important;
+  transform: translate(0, 7px);
+}
+
+.filled{
+  font-variation-settings: 'FILL' 1;
 }

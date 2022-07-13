@@ -1,5 +1,4 @@
 ﻿let colors = 2;
-let copy = '';
 
 generateGradient();
 
@@ -7,14 +6,8 @@ $( document ).ready(function (){
     Coloris({themeMode: 'dark', theme: 'polaroid',defaultColor: '#f00', alpha: false, format: 'hex'});
 });
 
-$("#paste").click(function (){
-    navigator.clipboard.readText()
-        .then(text => {
-            $("#input").val(text);
-        })
-        .catch(err => {
-            console.error('Failed to read clipboard contents: ', err);
-        });
+document.addEventListener('coloris:pick', event => {
+    generateGradient();
 });
 
 $("#add-btn").click(function (){
@@ -22,6 +15,7 @@ $("#add-btn").click(function (){
     $("#color-list").append("<input value='#000000' type=\"text\" class=\"color-input\" id=\"color-" + colors + "\" data-coloris>");
     colors++;
     updateColoris();
+    generateGradient();
 });
 
 $("#remove-btn").click(function (){
@@ -31,6 +25,7 @@ $("#remove-btn").click(function (){
 
     $("#color-list").children().last().remove();
     colors--;
+    generateGradient();
 });
 
 function updateColoris() {
@@ -48,7 +43,6 @@ function getAllColors() {
 }
 
 function generateGradient(){
-    copy = '';
     let word = $("#input").val();
     
     if(word.length < 2){
@@ -66,6 +60,7 @@ function generateGradient(){
     rainbow.setSpectrumByArray(getAllColors());
 
     let ret = '';
+    let copy = '';
     
     for(let i = 1; i <= word.length; i++){
         let char = word.at(i - 1);
@@ -82,7 +77,9 @@ function generateGradient(){
         copy += "<color=" + color + ">" + char + "</color>";
     }
 
-    let preview = $("#preview");
+    $("#output").val(copy)
+    
+    let preview = $("#name");
     
     preview.children().empty();
     preview.append(ret);
@@ -91,7 +88,7 @@ function generateGradient(){
 }
 
 function copyGradient(){
-    navigator.clipboard.writeText(copy).then(r => {
+    navigator.clipboard.writeText($("#output").val()).then(r => {
         console.log(r)
         Swal.fire({
             icon: 'success',

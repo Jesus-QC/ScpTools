@@ -1,7 +1,12 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+#if DEBUG
+Console.WriteLine("IMPORTANT: DEBUG MODE ON");
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+#else
+builder.Services.AddRazorPages();
+#endif
 
 var app = builder.Build();
 
