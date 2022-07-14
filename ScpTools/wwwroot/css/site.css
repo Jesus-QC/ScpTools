@@ -97,7 +97,7 @@ body{
 .server-info-name{
     overflow-wrap: break-word;
     overflow-y: hidden;
-    width: 33vh;
+    width: 90%;
     max-height: 8vh;
     font-size: 1.25rem;
 }
