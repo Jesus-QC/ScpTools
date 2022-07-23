@@ -65,6 +65,12 @@ function generateGradient(){
     for(let i = 1; i <= word.length; i++){
         let char = word.at(i - 1);
         
+        if(char === '\n'){
+            copy += '\\n';
+            ret += '<br>';
+            continue;
+        }
+        
         if(char === ' '){
             copy += ' ';
             ret += ' ';
@@ -81,7 +87,7 @@ function generateGradient(){
     
     let preview = $("#name");
     
-    preview.children().empty();
+    preview.empty();
     preview.append(ret);
     
     return ret;

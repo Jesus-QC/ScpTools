@@ -55,8 +55,8 @@ body{
     position: fixed;
     top: 10px;
     right: 10px;
-    background-color: white;
-    color: black;
+    background-color: #121212;
+    color: white;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
@@ -68,72 +68,48 @@ body{
     }
 }
 
-.server-info{
-    height: 18vh;
-    width: 40vw;
-    background-color: #181414;
-    font-family: 'Roboto', sans-serif;
-    padding: 10px;
-    border-radius: 10px;
-    border-color: #000;
-    border-style: solid;
-    border-width: 10px;
-    color: white;
-}
-
-@media screen and (max-width: 800px){
-    .server-info{
-        height: 13vh;
-        width: 90vw;
-    }
-}
-
-@media (max-height: 600px){
-    .server-info{
-        height: 40vh;
-    }
-}
-
-.server-info-name{
-    overflow-wrap: break-word;
-    overflow-y: hidden;
-    width: 33vh;
-    max-height: 8vh;
-    font-size: 1.25rem;
-}
-
-.server-info-counter{
-    position: absolute;
-    bottom: 0;
-    font-size: 1.75rem;
-}
-
-.server-info-play{
-    position: absolute;
-    top: 0.65rem;
-    right: 0.25rem;
-    font-size: 3rem !important;
-}
-
-.server-info-star{
-    position: absolute;
-    bottom: 0.85rem;
-    right: 0.35rem;
-    font-size: 2.5rem !important;
-}
-
-.server-info-flags{
-    position: absolute;
-    bottom: 0.25rem;
-    left: 5.25rem;
-    font-size: 1.5rem;
-}
-
-.flag-icon{
-    font-size: 2rem !important;
-    transform: translate(0, 7px);
-}
-
 .filled{
     font-variation-settings: 'FILL' 1;
+}
+
+.hide-light{
+    display: none;
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #121212;
+        color: white;
+    }
+    
+    .main-nav{
+        background-color: #121212 !important;
+        border-color: #222222 !important;
+    }
+    
+    .navbar-brand{
+        color: white !important;
+    }
+    
+    .nav-link{
+        color: #ccc !important;
+    }
+
+    ::-webkit-scrollbar-track
+    {
+        background-color: #222222;
+    }
+
+    .navbar-toggle{
+        background-color: white;
+        color: #121212;
+    }
+    
+    .navbar-toggler{
+        border-color: rgba(255,255,255, .1) !important;
+    }
+    
+    .navbar-toggler-icon{
+        filter: invert(100%);
+    }
 }
