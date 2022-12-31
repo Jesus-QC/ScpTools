@@ -99,11 +99,6 @@ body{
     {
         background-color: #222222;
     }
-
-    .navbar-toggle{
-        background-color: white;
-        color: #121212;
-    }
     
     .navbar-toggler{
         border-color: rgba(255,255,255, .1) !important;

@@ -6,7 +6,7 @@ $( document ).ready(function (){
     Coloris({themeMode: 'dark', theme: 'polaroid',defaultColor: '#f00', alpha: false, format: 'hex'});
 });
 
-document.addEventListener('coloris:pick', event => {
+document.addEventListener('coloris:pick', _ => {
     generateGradient();
 });
 

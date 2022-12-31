@@ -1,4 +1,4 @@
-﻿@page "/gradient"
+﻿@page "/Gradient"
 @model ScpTools.Pages.GradientText
 @{
     ViewData["Title"] = "Gradient Text";
@@ -71,10 +71,13 @@
     </div>
 </div>
 
-<!-- Color Picker Lib -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"/>
-<script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
-
-<script src="~/js/rainbowvis.js" asp-append-version="true"></script>
-<script src="~/js/gradient.js" asp-append-version="true"></script>
+@section Scripts
+{
+    <!-- Color Picker Lib -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+    
+    <script src="~/js/rainbowvis.js" asp-append-version="true"></script>
+    <script src="~/js/gradient.js" asp-append-version="true"></script>
+}
 
